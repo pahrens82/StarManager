@@ -1,0 +1,90 @@
+{% extends 'home/index.html' %}
+
+{% block content %}
+<div class="row">
+    <div class="col">
+        <h3>{{ character }}</h3>
+        {{ character.race }} {{ character.character_class }}, {{ character.theme }}
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <hr/>
+    </div>
+</div>
+<div class="row">
+    <div class="col-3">
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>Ability</th>
+                <th>Score</th>
+                <th>Modifier</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><strong>Strength: </strong></td>
+                <td>{{ character.strength }}</td>
+                <td class="str-mod"></td>
+            </tr>
+            <tr>
+                <td><strong>Dexterity: </strong></td>
+                <td>{{ character.dexterity }}</td>
+                <td class="dex-mod"></td>
+            </tr>
+            <tr>
+                <td><strong>Constitution: </strong></td>
+                <td>{{ character.constitution }}</td>
+                <td class="con-mod"></td>
+            </tr>
+            <tr>
+                <td><strong>Intelligence: </strong></td>
+                <td>{{ character.intelligence }}</td>
+                <td class="int-mod"></td>
+            </tr>
+            <tr>
+                <td><strong>Wisdom: </strong></td>
+                <td>{{ character.wisdom }}</td>
+                <td class="wis-mod"></td>
+            </tr>
+            <tr>
+                <td><strong>Charisma: </strong></td>
+                <td>{{ character.charisma }}</td>
+                <td class="cha-mod"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-3">
+        <table class="table table-bordered">
+            <tr>
+                <td><strong>Hit Points: </strong></td>
+                <td>{{ total_hp }}</td>
+            </tr>
+            <tr>
+                <td><strong>Stamina: </strong></td>
+                <td>{{ character.character_class.stamina }}</td>
+            </tr>
+            <tr>
+                <td><strong>Fortitude: </strong></td>
+                <td>{{ character.character_class.fort }}</td>
+            </tr>
+            <tr>
+                <td><strong>Reflex: </strong></td>
+                <td>{{ character.character_class.ref }}</td>
+            </tr>
+            <tr>
+                <td><strong>Willpower: </strong></td>
+                <td>{{ character.character_class.will }}</td>
+            </tr>
+            <tr>
+                <td><strong>Base Attack Bonus: </strong></td>
+                <td>{{ character.character_class.bab }}</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,16 @@
+{% load static %}
+
+{% if not debug %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.29.0/css/theme.default.min.css" />
+{% endif %}
+
+{% if debug %}
+<link rel="stylesheet" type="text/less" href="{% static 'framework/twitter/less/bootstrap.less' %}" />
+<link rel="stylesheet" type="text/less" href="{% static 'framework/font-awesome/less/font-awesome.less' %}" />
+{% endif %}
+<link rel="stylesheet" type="text/less" href="{% static 'stylesheets/site-wide.less' %}" />
+<link rel="stylesheet" type="text/less" href="{% static 'stylesheets/font-awesome-additions.less' %}" />
+<!--<link rel="stylesheet" type="text/css" href="{% static 'css/header.css' %}" />-->
+<!--<link rel="stylesheet" type="text/css" href="{% static 'css/theme.default.css' %}" />-->

@@ -1,0 +1,91 @@
+<form action="" method="post">{% csrf_token %}
+    <div class="row">
+        <div class="col">
+            {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#cosmeticFields"
+                    aria-expanded="false" aria-controls="collapseExample">
+                Cosmetic Fields
+            </button>
+            <div class="collapse" id="cosmeticFields">
+                <div class="card card-body">
+                    <p><strong>{{ form.name.label_tag }} </strong>{{ form.name }}</p>
+                    <p><strong>{{ form.alignment.label_tag }} </strong>{{ form.alignment }}</p>
+                    <p><strong>{{ form.age.label_tag }} </strong>{{ form.age }}</p>
+                    <p><strong>{{ form.gender.label_tag }} </strong>{{ form.gender }}</p>
+                    <p><strong>{{ form.height.label_tag }} </strong>{{ form.height }}</p>
+                    <p><strong>{{ form.weight.label_tag }} </strong>{{ form.weight }}</p>
+                    <p><strong>{{ form.hair_color.label_tag }} </strong>{{ form.hair_color }}</p>
+                    <p><strong>{{ form.eye_color.label_tag }} </strong>{{ form.eye_color }}</p>
+                </div>
+            </div>
+            <hr/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#raceSelector"
+                    aria-expanded="false" aria-controls="collapseExample">
+                Race
+            </button>
+            <div class="collapse" id="raceSelector">
+                <div class="card card-body" data-ajax-target="{% url 'generator:race-filter' %}">
+                    <p><strong>{{ form.race.label_tag }} </strong>{{ form.race }}</p>
+                </div>
+            </div>
+            <hr/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#themeSelector"
+                    aria-expanded="false" aria-controls="collapseExample">
+                Theme
+            </button>
+            <div class="collapse" id="themeSelector">
+                <div class="card card-body" data-ajax-target="{% url 'generator:theme-filter' %}">
+                    <p><strong>{{ form.theme.label_tag }} </strong>{{ form.theme }}</p>
+                </div>
+            </div>
+            <hr/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#classSelector"
+                    aria-expanded="false" aria-controls="collapseExample">
+                Class
+            </button>
+            <div class="collapse" id="classSelector">
+                <div class="card card-body" data-ajax-target="{% url 'generator:class-filter' %}">
+                    <p><strong>{{ form.character_class.label_tag }} </strong>{{ form.character_class }}</p>
+                </div>
+            </div>
+            <hr/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <button disabled class="btn btn-primary" type="button" data-toggle="collapse" data-target="#abilityScores"
+                    aria-expanded="false" aria-controls="collapseExample">
+                Ability Scores
+            </button>
+            <div><small><em>Select a race, theme, and class to unlock this.</em></small></div>
+            <div class="collapse" id="abilityScores">
+                <div class="card card-body">
+                    {% include 'generator/partials/ability_scores.html' %}
+                </div>
+            </div>
+            <hr/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <input disabled id="save" class="btn btn-success" type="submit" value="Save"/>
+            <div><small><em>All ability points must be spent to unlock this.</em></small></div>
+        </div>
+    </div>
+</form>

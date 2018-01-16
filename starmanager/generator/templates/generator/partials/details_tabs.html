@@ -1,0 +1,32 @@
+<div class="row">
+    <div class="col">
+        <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" href="#overview" role="tab" data-toggle="tab">Overview</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#raceDetails" role="tab" data-toggle="tab">Race Details</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#themeDetails" role="tab" data-toggle="tab">Theme Details</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#classDetails" role="tab" data-toggle="tab">Class Details</a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div id="overview" class="tab-pane active" role="tabpanel">
+                {% include 'generator/partials/overview.html' %}
+            </div>
+            <div id="raceDetails" class="tab-pane" role="tabpanel">
+                {% include 'generator/partials/race_table.html' %}
+            </div>
+            <div id="themeDetails" class="tab-pane" role="tabpanel">
+                {% include 'generator/partials/theme_table.html' %}
+            </div>
+            <div id="classDetails" class="tab-pane" role="tabpanel">
+                {% include 'generator/partials/class_table.html' %}
+            </div>
+        </div>
+    </div>
+</div>

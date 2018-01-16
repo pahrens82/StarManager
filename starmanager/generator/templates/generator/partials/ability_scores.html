@@ -1,0 +1,47 @@
+{% load widget_tweaks %}
+<table>
+    <thead>
+        <tr>
+            <th>Points Remaining:</th>
+            <th class="points-remaining">10</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>{{ form.strength.label_tag }}</strong></td>
+            <td>{{ form.strength|attr:'min:10'|attr:'max:18'|attr:'step:1' }}</td>
+            <td><input class="human-ability" hidden type="checkbox"></td>
+            <td><input class="theme-ability" hidden type="checkbox"></td>
+        </tr>
+        <tr>
+            <td><strong>{{ form.dexterity.label_tag }}</strong></td>
+            <td>{{ form.dexterity|attr:'min:10'|attr:'max:18'|attr:'step:1' }}</td>
+            <td><input class="human-ability" hidden type="checkbox"></td>
+            <td><input class="theme-ability" hidden type="checkbox"></td>
+        </tr>
+        <tr>
+            <td><strong>{{ form.constitution.label_tag }}</strong></td>
+            <td>{{ form.constitution|attr:'min:10'|attr:'max:18'|attr:'step:1' }}</td>
+            <td><input class="human-ability" hidden type="checkbox"></td>
+            <td><input class="theme-ability" hidden type="checkbox"></td>
+        </tr>
+        <tr>
+            <td><strong>{{ form.intelligence.label_tag }}</strong></td>
+            <td>{{ form.intelligence|attr:'min:10'|attr:'max:18'|attr:'step:1' }}</td>
+            <td><input class="human-ability" hidden type="checkbox"></td>
+            <td><input class="theme-ability" hidden type="checkbox"></td>
+        </tr>
+        <tr>
+            <td><strong>{{ form.wisdom.label_tag }}</strong></td>
+            <td>{{ form.wisdom|attr:'min:10'|attr:'max:18'|attr:'step:1' }}</td>
+            <td><input class="human-ability" hidden type="checkbox"></td>
+            <td><input class="theme-ability" hidden type="checkbox"></td>
+        </tr>
+        <tr>
+            <td><strong>{{ form.charisma.label_tag }}</strong></td>
+            <td>{{ form.charisma|attr:'min:10'|attr:'max:18'|attr:'step:1' }}</td>
+            <td><input class="human-ability" hidden type="checkbox"></td>
+            <td><input class="theme-ability" hidden type="checkbox"></td>
+        </tr>
+    </tbody>
+</table>

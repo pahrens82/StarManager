@@ -1,0 +1,33 @@
+{% extends 'home/index.html' %}
+
+{% block content %}
+<div class="row">
+    <div class="col-5">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Race</th>
+                <th>Theme</th>
+                <th>Class</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for item in list %}
+            <tr>
+                <td><a title="View this character" href="{% url 'generator:detail' item.id %}">{{ item }}</a></td>
+                <td>{{ item.race.name }}</td>
+                <td>{{ item.theme.name }}</td>
+                <td>{{ item.character_class.name }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td>No Characters Available.</td>
+            </tr>
+            {% endfor %}
+
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,29 @@
+#psycopg2>=2.6,<2.7
+requests>=2.18,<2.19
+	#certifi
+	#chardet
+	#idna
+	#urllib3
+
+Django==2.0.1
+pytz==2017.3
+django-compressor>=2.1,<2.2
+	#django-appconf
+	#rcssmin
+	#rjsmin
+django-haystack>=2.6.1,<2.6.5
+django-recaptcha2>=1.0,<1.1
+	#captcha
+	#requests
+django-widget-tweaks>=1.4.1,<1.5
+dj-static==0.0.6
+    #static3
+
+Pillow==4.2.1
+    #libjpeg
+    #zlib
+
+Whoosh>=2.7.4,<2.8
+
+#Transcrypt>=3.6,<3.7
+

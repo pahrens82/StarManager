@@ -1,0 +1,27 @@
+{% extends 'home/index.html' %}
+
+{% load static %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{% static 'generator/less/generator.css' %}" />
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-3">
+        {% include 'generator/partials/character_fields.html' %}
+    </div>
+    <div class="col-7">
+        {% include 'generator/partials/details_tabs.html' %}
+    </div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+    <script type="text/javascript" src="{% static 'generator/js/controls.js' %}"></script>
+    <!--<script type="text/javascript" src="{% static 'generator/js/ability_scores.js' %}"></script>-->
+    <!--<script type="text/javascript" src="{% static 'generator/js/race_selection.js' %}"></script>-->
+    <!--<script type="text/javascript" src="{% static 'generator/js/theme_selection.js' %}"></script>-->
+    <!--<script type="text/javascript" src="{% static 'generator/js/class_selection.js' %}"></script>-->
+{% endblock %}
